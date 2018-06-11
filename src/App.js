@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import Header from './Header';
+import Sidebar from './Sidebar'
+
 class App extends Component {
   render() {
     return (
-      <div className="text-center">
-        <header className="bg-purple-darker m-6 p-6 rounded shadow-lg">
-          <h1 className="text-white text-3xl">Welcome to a Color Picker</h1>
-        </header>
+      <div>
+        <Header/>
+        <Sidebar/>
+        <div className="flex">
+          <div className="block border-solid m-6 p-6 rounded shadow-lg w-48 h-48">
+          </div>
+        </div>
         
       </div>
     );
