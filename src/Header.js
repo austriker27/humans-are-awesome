@@ -16,9 +16,9 @@ class Header extends Component {
             </div>
           
             <div
-              className="block md:inline-block text-white uppercase tracking-wide" 
+              className="bg-white text-black rounded block md:inline-block text-white uppercase tracking-wide" 
             >
-              Search bar
+              Search  
             </div>
                 
           </div>
