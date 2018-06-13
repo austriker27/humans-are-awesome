@@ -9,12 +9,21 @@ class Colors extends Component {
     this.state = {
       name: '',
       colorsArray: [],
+      selected: false,
       currentPage: 1,
       colorsPerPage: 12
     };
-    this.handleClick = this.handleClick.bind(this);
+    this.handlePaginationClick = this.handlePaginationClick.bind(this);
+    this.handleToggleClick = this.handleToggleClick.bind(this);
   }
-  handleClick(event) {
+
+  handleToggleClick(index, event){
+    event.preventDefault();
+    this.setState(prevState => ({clicked: true}));
+  }
+
+
+  handlePaginationClick(event) {
     this.setState({
       currentPage: Number(event.target.id)
     });
@@ -34,7 +43,7 @@ class Colors extends Component {
 
   render() {
     const { colorsArray, currentPage, colorsPerPage} = this.state;
-    
+    const selected = this.state.selected;
     const indexOfLastColor = currentPage * colorsPerPage;
     const indexOfFirstColor = indexOfLastColor - colorsPerPage;
     const currentColors = colorsArray.slice(indexOfFirstColor, indexOfLastColor);
@@ -67,7 +76,7 @@ class Colors extends Component {
         <button
           key={number}
           id={number}
-          onbuttonck={this.handleClick}
+          onClick={this.handlePaginationClick}
           className="text-grey-darkest"
         >
           {number}

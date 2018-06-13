@@ -6,7 +6,6 @@ import HelpfulHumanLogo from './assets/logo-symbol.svg'
 class Header extends Component {
   render() {
     return (
-      <div>
         <nav className="bg-black">
           <div className="h-16 flex flex-wrap items-center justify-between mx-auto p-4 md:p-8 z-10">
             
@@ -26,7 +25,6 @@ class Header extends Component {
                 
           </div>
         </nav>
-      </div>
     );
   }
 }
