@@ -8,10 +8,10 @@ class Header extends Component {
     return (
       <div>
         <nav className="bg-black">
-          <div className="h-16 flex flex-wrap items-center justify-between max-w-xl mx-auto p-4 md:p-8 z-10">
+          <div className="h-16 flex flex-wrap items-center justify-between mx-auto p-4 md:p-8 z-10">
             
             <div className="flex items-center ">
-              <img src={HelpfulHumanLogo} className="h-6" alt="Logo">
+              <img src={HelpfulHumanLogo} className="h-8" alt="Logo">
               </img> 
             </div>
           
