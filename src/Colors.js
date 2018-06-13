@@ -44,15 +44,15 @@ class Colors extends Component {
 
     const renderColors = currentColors.map((colorItem, index) => { 
       return <div className="m-4" key={index}>
-        <div className="max-w-sm rounded overflow-hidden shadow-lg w-48">
+        <button className="max-w-sm rounded overflow-hidden shadow-lg w-48">
           <div style={{ backgroundColor: colorItem }} className="h-32">
           </div>
           <div className="px-6 py-4">
-            <p className="text-grey-darker">
+            <p className="text-grey-darker text-left">
               {colorItem}
             </p>
           </div>
-        </div>
+        </button>
       </div>
     })
     
@@ -64,13 +64,14 @@ class Colors extends Component {
 
     const renderPageNumbers = pageNumbers.map(number => {
       return (
-        <li
+        <button
           key={number}
           id={number}
-          onClick={this.handleClick}
+          onbuttonck={this.handleClick}
+          className="text-grey-darkest"
         >
           {number}
-        </li>
+        </button>
       );
     });
 
@@ -81,9 +82,9 @@ class Colors extends Component {
           {renderColors}
         </div>
 
-        <ul className="list-reset flex mx-auto w-1/4 justify-around mt-8" id="pageNumbers">
+        <div className="list-reset flex mx-auto w-1/4 justify-around mt-8" id="pageNumbers">
           {renderPageNumbers}
-        </ul>
+        </div>
         
       </div>
     );
