@@ -3,7 +3,9 @@ import './App.css';
 
 import Header from './Header';
 import Sidebar from './Sidebar'
-import Colors from './Colors';
+import AllColorsList from './AllColorsList';
+import Pagination from './Pagination';
+
 
 require('typeface-source-serif-pro');
 
@@ -14,11 +16,9 @@ class App extends Component {
         <Header/>
         <div className="flex">
           <Sidebar/>
-          <div className="">
-            <Colors />
-          </div>
+          <AllColorsList />
         </div>
-        
+        <Pagination/>
       </div>
     );
   }

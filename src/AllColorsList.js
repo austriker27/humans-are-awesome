@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import './Colors.css';
 
 import randomColor from 'randomcolor';
 
-class Colors extends Component {
+class AllColorsList extends Component {
   constructor(props){
     super(props);
     this.state = {
@@ -14,13 +13,15 @@ class Colors extends Component {
       colorsPerPage: 12
     };
     this.handlePaginationClick = this.handlePaginationClick.bind(this);
-    this.handleToggleClick = this.handleToggleClick.bind(this);
+    this.handleColorDetails = this.handleColorDetails.bind(this);
   }
 
-  handleToggleClick(index, event){
+  handleColorDetails(index, event){
     event.preventDefault();
-    this.setState(prevState => ({clicked: true}));
+    this.setState(prevState => ({selected: true}));
   }
+
+  // setup a flag for the selected color? 
 
 
   handlePaginationClick(event) {
@@ -47,13 +48,13 @@ class Colors extends Component {
     const indexOfLastColor = currentPage * colorsPerPage;
     const indexOfFirstColor = indexOfLastColor - colorsPerPage;
     const currentColors = colorsArray.slice(indexOfFirstColor, indexOfLastColor);
-    // const colorSwatchBackground = {
-    //     backgroundColor: {color},
-    // }
 
     const renderColors = currentColors.map((colorItem, index) => { 
       return <div className="m-4" key={index}>
-        <button className="max-w-sm rounded overflow-hidden shadow-lg w-48">
+        <button 
+          className="max-w-sm rounded overflow-hidden shadow-lg w-48"
+          onClick={this.handleColorDetails}
+        >
           <div style={{ backgroundColor: colorItem }} className="h-32">
           </div>
           <div className="px-6 py-4">
@@ -84,20 +85,10 @@ class Colors extends Component {
       );
     });
 
-    return (
-      
-      <div className="colors m-8">
-        <div className="flex flex-wrap justify-around">
-          {renderColors}
-        </div>
-
-        <div className="list-reset flex mx-auto w-1/4 justify-around mt-8" id="pageNumbers">
-          {renderPageNumbers}
-        </div>
-        
-      </div>
-    );
+    return (       
+      <renderColors/>
+    )
   }
 }
 
-export default Colors;
+export default AllColorsList;
