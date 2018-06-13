@@ -7,7 +7,7 @@ class Header extends Component {
   render() {
     return (
       <div>
-        <nav className="h-16 bg-black">
+        <nav className="h-24 bg-black">
           <div className="flex flex-wrap items-center justify-between max-w-xl mx-auto p-4 md:p-8 z-10">
             
             <div className="flex items-center ">
@@ -15,10 +15,13 @@ class Header extends Component {
               </img> 
             </div>
           
-            <div
-              className="bg-white text-black rounded block md:inline-block text-white uppercase tracking-wide" 
-            >
-              Search  
+            <div className="mr-6 my-2">
+              <input 
+                type="search" 
+                className="bg-purple-white rounded border-0 p-3" 
+                placeholder="Search">
+  
+              </input>
             </div>
                 
           </div>

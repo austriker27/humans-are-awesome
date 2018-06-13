@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
 import './Sidebar.css';
 
-import randomColor from 'randomcolor';
+// import randomColor from 'randomcolor';
 
 // setting up a random color generator based onClick
-
-// Returns a hex code for a 'truly random' color
-let randomNumber = randomColor({
-  luminosity: 'random',
-  hue: 'random'
-});
+// loop through the colorsArray and select an item at a random indice, numbered 0 - 99
 
 class Sidebar extends Component {
   render() {
