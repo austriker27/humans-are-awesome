@@ -7,21 +7,20 @@ class Header extends Component {
   render() {
     return (
         <nav className="bg-black">
-          <div className="h-16 flex flex-wrap items-center justify-between mx-auto p-4 md:p-8 z-10">
+          <div className="h-32 md:h-16 flex flex-col md:flex-wrap items-center justify-between mx-auto p-4 z-10">
             
-            <div className="flex items-center ">
-              <img src={HelpfulHumanLogo} className="h-8" alt="Logo">
-              </img> 
-            </div>
+            
+            <img src={HelpfulHumanLogo} className="h-8" alt="Logo">
+            </img> 
           
-            <div className="mr-6 my-2">
-              <input 
-                type="search" 
-                className="bg-purple-white rounded border-0 p-3" 
-                placeholder="Search">
-  
-              </input>
-            </div>
+          
+            <input 
+              type="search" 
+              className="bg-purple-white rounded border-0 p-3 h-8" 
+              placeholder="Search">
+
+            </input>
+            
                 
           </div>
         </nav>

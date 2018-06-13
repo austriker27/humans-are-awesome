@@ -14,7 +14,7 @@ class App extends Component {
         <Header/>
         <div className="flex">
           <Sidebar/>
-          <div className="m-4">
+          <div className="">
             <Colors />
           </div>
         </div>
