@@ -12,7 +12,6 @@ class AllColorsList extends Component {
       currentPage: 1,
       colorsPerPage: 12
     };
-    this.handlePaginationClick = this.handlePaginationClick.bind(this);
     this.handleColorDetails = this.handleColorDetails.bind(this);
   }
 
@@ -23,12 +22,6 @@ class AllColorsList extends Component {
 
   // setup a flag for the selected color? 
 
-
-  handlePaginationClick(event) {
-    this.setState({
-      currentPage: Number(event.target.id)
-    });
-  }
 
   componentWillMount(){
     var colors = [...randomColor({
@@ -43,11 +36,8 @@ class AllColorsList extends Component {
   }
 
   render() {
-    const { colorsArray, currentPage, colorsPerPage} = this.state;
     const selected = this.state.selected;
-    const indexOfLastColor = currentPage * colorsPerPage;
-    const indexOfFirstColor = indexOfLastColor - colorsPerPage;
-    const currentColors = colorsArray.slice(indexOfFirstColor, indexOfLastColor);
+
 
     const renderColors = currentColors.map((colorItem, index) => { 
       return <div className="m-4" key={index}>
@@ -66,24 +56,6 @@ class AllColorsList extends Component {
       </div>
     })
     
-
-    const pageNumbers = [];
-    for (let i = 1; i <= Math.ceil(colorsArray.length / colorsPerPage); i++) {
-      pageNumbers.push(i);
-    }
-
-    const renderPageNumbers = pageNumbers.map(number => {
-      return (
-        <button
-          key={number}
-          id={number}
-          onClick={this.handlePaginationClick}
-          className="text-grey-darkest"
-        >
-          {number}
-        </button>
-      );
-    });
 
     return (       
       <renderColors/>

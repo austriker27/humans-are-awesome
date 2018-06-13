@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import randomColor from 'randomcolor';
 
-class AllColorsList extends Component {
+class SingleColorDetail extends Component {
   constructor(props){
     super(props);
     this.state = {
@@ -23,19 +23,6 @@ class AllColorsList extends Component {
 
   // setup a flag for the selected color? 
 
-
-
-  componentWillMount(){
-    var colors = [...randomColor({
-      count: 100,
-      luminosity: 'random',
-    })];
-   //  take colorsArray and add in colors to the array
-    this.setState(colorsArray => {
-      return {colorsArray: colors};
-    });
-    
-  }
 
   render() {
     const { colorsArray, currentPage, colorsPerPage} = this.state;
@@ -65,4 +52,4 @@ class AllColorsList extends Component {
   }
 }
 
-export default AllColorsList;
+export default SingleColorDetail ;
