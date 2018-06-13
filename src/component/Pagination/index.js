@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 
-class Pagination extends Component {
+class Pagination extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -36,22 +36,36 @@ class Pagination extends Component {
       pageNumbers.push(i);
     }
 
-    const renderPageNumbers = pageNumbers.map(number => {
-      return (
-        <button
-          key={number}
-          id={number}
-          onClick={this.handlePaginationClick}
-          className="text-grey-darkest"
-        >
-          {number}
-        </button>
-      );
-    });
+    // const RenderPageNumbers = pageNumbers.map(number => {
+    //   return (
+    //     <button
+    //       key={number}
+    //       id={number}
+    //       onClick={this.handlePaginationClick}
+    //       className="text-grey-darkest"
+    //     >
+    //       {number}
+    //     </button>
+    //   );
+    // });
     
 
     return (
-      <renderPageNumbers/>
+      <div>
+      {pageNumbers.map(number => {
+        return (
+          <button
+            key={number}
+            id={number}
+            onClick={this.handlePaginationClick}
+            className="text-grey-darkest"
+          >
+            {number}
+          </button>
+        );
+      })
+    }
+      </div>
     );
   };
 };

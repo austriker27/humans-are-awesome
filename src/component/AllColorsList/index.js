@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import randomColor from 'randomcolor';
+import colorsArray from '../../utils/colorGenerator';
 
-class AllColorsList extends Component {
+
+class AllColorsList extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -24,41 +26,58 @@ class AllColorsList extends Component {
 
 
   componentWillMount(){
-    var colors = [...randomColor({
-      count: 100,
-      luminosity: 'random',
-    })];
+    console.log(colorsArray)
+
    //  take colorsArray and add in colors to the array
     this.setState(colorsArray => {
-      return {colorsArray: colors};
+      return {colorsArray: colorsArray};
     });
-    
+    console.log(this.state.colorsArray)
   }
 
   render() {
     const selected = this.state.selected;
 
       // TODO: update colorsArray to be current colors
-    const renderColors = this.state.colorsArray.map((colorItem, index) => { 
-      return <div className="m-4" key={index}>
-        <button 
-          className="max-w-sm rounded overflow-hidden shadow-lg w-48"
-          onClick={this.handleColorDetails}
-        >
-          <div style={{ backgroundColor: colorItem }} className="h-32">
-          </div>
-          <div className="px-6 py-4">
-            <p className="text-grey-darker text-left">
-              {colorItem}
-            </p>
-          </div>
-        </button>
-      </div>
-    })
+    // const RenderColors = colorsArray.map((colorItem, index) => { 
+    //   return <div className="m-4" key={index}>
+    //     <button 
+    //       className="max-w-sm rounded overflow-hidden shadow-lg w-48"
+    //       onClick={this.handleColorDetails}
+    //     >
+    //       <div style={{ backgroundColor: colorItem }} className="h-32">
+    //       </div>
+    //       <div className="px-6 py-4">
+    //         <p className="text-grey-darker text-left">
+    //           {colorItem}
+    //         </p>
+    //       </div>
+    //     </button>
+    //     <h1>hello</h1>
+    //   </div>
+    // })
     
 
     return (       
-      <renderColors/>
+      <div className="flex flex-wrap justify-start mt-8 ml-4">
+        {colorsArray.map((colorItem, index) => {
+          return <div className="m-4" key={index}>
+          <button 
+            className="max-w-sm rounded overflow-hidden shadow-lg w-48"
+            onClick={this.handleColorDetails}
+          >
+            <div style={{ backgroundColor: colorItem }} className="h-32">
+            </div>
+            <div className="px-6 py-4">
+              <p className="text-grey-darker text-left">
+                {colorItem}
+              </p>
+            </div>
+          </button>
+        </div>
+        }
+        )}
+      </div>
     )
   }
 }

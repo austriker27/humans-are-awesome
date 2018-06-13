@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import randomColor from 'randomcolor';
 
-class SingleColorDetail extends Component {
+class SingleColorDetail extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -28,7 +28,7 @@ class SingleColorDetail extends Component {
     const { colorsArray, currentPage, colorsPerPage} = this.state;
     const selected = this.state.selected;
 
-    const renderOneColor = currentColors.map((oneColor, index) => {
+    const renderOneColor = colorsArray.map((oneColor, index) => {
       return 
         <div className="colorDetails">
           <div style={{ backgroundColor: oneColor }} className="h-32">
@@ -52,4 +52,4 @@ class SingleColorDetail extends Component {
   }
 }
 
-export default SingleColorDetail ;
+export default SingleColorDetail;
