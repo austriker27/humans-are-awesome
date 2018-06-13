@@ -38,8 +38,8 @@ class AllColorsList extends Component {
   render() {
     const selected = this.state.selected;
 
-
-    const renderColors = currentColors.map((colorItem, index) => { 
+      // TODO: update colorsArray to be current colors
+    const renderColors = this.state.colorsArray.map((colorItem, index) => { 
       return <div className="m-4" key={index}>
         <button 
           className="max-w-sm rounded overflow-hidden shadow-lg w-48"

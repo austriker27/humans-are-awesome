@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Header.css';
 
-import HelpfulHumanLogo from './assets/logo-symbol.svg'
+import HelpfulHumanLogo from '../../assets/logo-symbol.svg'
 
 class Header extends Component {
   render() {
