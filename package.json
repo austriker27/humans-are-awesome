@@ -1,13 +1,14 @@
 {
-  "name": "react-tailwindcss-demo",
-  "homepage": "https://landish.github.io/react-tailwindcss-demo",
+  "name": "humans-are-awesome",
+  "homepage": "",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "randomcolor": "^0.5.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.1.1"
+    "react-scripts": "1.1.1",
+    "typeface-source-serif-pro": "0.0.54"
   },
   "scripts": {
     "tailwind:css": "tailwind build src/css/tailwind.src.css -c tailwind.js -o src/css/tailwind.css",

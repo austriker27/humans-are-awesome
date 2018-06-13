@@ -81,7 +81,7 @@ class Colors extends Component {
           {renderColors}
         </div>
 
-        <ul className="list-reset flex" id="pageNumbers">
+        <ul className="list-reset flex mx-auto w-1/4 justify-around mt-8" id="pageNumbers">
           {renderPageNumbers}
         </ul>
         

@@ -5,6 +5,8 @@ import Header from './Header';
 import Sidebar from './Sidebar'
 import Colors from './Colors';
 
+require('typeface-source-serif-pro');
+
 class App extends Component {
   render() {
     return (
