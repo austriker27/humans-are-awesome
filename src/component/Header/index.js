@@ -12,8 +12,7 @@ class Header extends Component {
             
             <img src={HelpfulHumanLogo} className="h-8" alt="Logo">
             </img> 
-          
-          
+
             <input 
               type="search" 
               className="bg-purple-white rounded border-0 p-3 h-8" 

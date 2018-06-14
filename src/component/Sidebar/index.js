@@ -16,10 +16,10 @@ class Sidebar extends Component {
 
     return (
       <div className="min-h-screen h-auto max-w-sm mt-8 ">
-        <div className="p-4 w-64">
+        <div className="p-4 w-64 my-4">
           <Link 
             to={randomColor.substring(1)} 
-            className="w-full bg-white hover:bg-grey-darkest text-grey-darkest hover:text-white py-4 px-4 border border-grey-darkest hover:border-transparent rounded">
+            className="w-full bg-white hover:bg-grey-darkest text-grey-darkest hover:text-white py-4 px-4 border border-grey-darkest hover:border-transparent rounded no-underline">
             Random Color
           </Link>
         </div>
