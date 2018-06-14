@@ -27,7 +27,7 @@ class App extends React.Component {
           <div>
             <Header/>
             <div className="flex h-full">
-              <div className="w-1/6 bg-grey h-full min-w-md">
+              <div className="w-1/6 bg-grey min-w-md" style={{ minWidth:'13rem' }}>
                 <Sidebar colors={this.colors}/>
               </div>
               <div className="flex flex-col justify-start w-5/6 mx-2 mt-4">
