@@ -39,26 +39,27 @@ class AllColorsList extends React.Component {
     
 
     const pageNumbers = [];
-    for (let i = 1; i <= Math.ceil(colorsArray.length / colorsPerPage); i++) {
+    for (let i = 1; i <= Math.ceil(this.colors  .length / colorsPerPage); i++) {
       pageNumbers.push(i);
     }
 
     const renderPageNumbers = pageNumbers.map(number => {
       return (
-        <li
+        <div
           key={number}
           id={number}
           onClick={this.handleClick}
+          className="text-grey-darker hover:black cursor-pointer"
         >
           {number}
-        </li>
+        </div>
       );
     });
 
     return (
       <React.Fragment> 
         { cards }
-        <ul className="list-reset flex" id="pageNumbers">
+        <ul className="flex justify-around w-1/2 mx-auto my-4 p-0" id="pageNumbers">
           { renderPageNumbers }
         </ul>   
       </React.Fragment>
