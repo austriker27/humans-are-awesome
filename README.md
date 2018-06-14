@@ -53,7 +53,7 @@ Feel free to create a fork and then send a PR if you would like to contribute.
 
 ## Authors
 
-* **David Lindahl** - *A Man Coding Army* - [My Github](https://github.com/austriker27)
+* **David Lindahl** - *A One Man Coding Army* - [My Github](https://github.com/austriker27)
 
 
 ## License
