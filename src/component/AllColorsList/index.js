@@ -1,10 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import SingleColorDetail from '../SingleColorDetail';
 import ColorCard from '../ColorCard';
-import colorsArray from '../../utils/colorGenerator';
-import { withRouter } from 'react-router';
-
 
 class AllColorsList extends React.Component {
   constructor(props){
