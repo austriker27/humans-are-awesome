@@ -4,15 +4,9 @@ import { Link } from 'react-router-dom'
 
 
 class Sidebar extends Component {
-  constructor(props) {
-    super(props);
-  }
-  
   render() {
-
     const colors = this.props.colors;
     const randomColor = colors[(Math.floor(Math.random()*colors.length))];
-
 
     return (
       <div className="min-h-screen h-auto max-w-sm mt-8 ">
@@ -57,8 +51,7 @@ class Sidebar extends Component {
             </button>
           </li>
         </ul>
-      </div>
-      
+      </div>      
     );
   }
 }

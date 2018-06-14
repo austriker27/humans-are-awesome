@@ -4,15 +4,8 @@ import randomColor from 'randomcolor';
 import { Link } from 'react-router-dom'
 
 class SingleColorDetail extends React.Component {
-  constructor(props) {
-    super(props);
-      
-    this.SelectedColor = this.props.match.params.hex;
-    this.generatedColor = randomColor({
-      luminosity: 'light',
-      hue: this.SelectedColor
-    })
-  }
+
+   // run a function from the randomColor library that changes the luminosity based on what we pass in
 
   getVariation(lumin){
     return randomColor({
@@ -21,13 +14,10 @@ class SingleColorDetail extends React.Component {
     })
   }
   
-  render(){
+  render(){   
+    // based on the value that is on the URL string, the user is selecting that color
+    this.SelectedColor = this.props.match.params.hex;
 
-  // let colorDarker  = this.color;
-  // let colorDarkest = this.color;
-  // let colorLighter = this.color;
-  // let colorLightest = this.color;
-  
   return(
     <React.Fragment>
       <div className="m-4 rounded overflow-hidden shadow-lg w-5/6 mx-auto">
@@ -56,7 +46,6 @@ class SingleColorDetail extends React.Component {
         <ColorCard color={this.getVariation('light')} />
       </div>
 
-
       <Link 
         className="bg-white hover:bg-grey-darkest text-grey-darkest hover:text-white py-4 px-4 border border-grey-darkest hover:border-transparent rounded mx-auto h-12 w-48 m-4 no-underline text-center"
         to="/"
@@ -65,9 +54,7 @@ class SingleColorDetail extends React.Component {
       </Link>
   
     </React.Fragment>
-
-  )
-  }
+  )}
 };
 
 export default SingleColorDetail;

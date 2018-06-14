@@ -15,23 +15,24 @@ class AllColorsList extends React.Component {
       currentPage: 1,
       colorsPerPage: 12,
     };
-    this.colors = colorsArray(100);
+    
     this.handleClick = this.handleClick.bind(this);
   }
+
+  // david - handle event click for the pagination
   handleClick(event) {
     this.setState({
       currentPage: Number(event.target.id)
     });
   }
 
-
   render() {
     
+    // setting up variables for the page numbers based on the current page and colorsPerPage from above
     const { currentPage, colorsPerPage } = this.state;
-    
     const indexOfLastColor = currentPage * colorsPerPage;
     const indexOfFirstColor = indexOfLastColor - colorsPerPage;
-    const currentColors = this.colors.slice(indexOfFirstColor, indexOfLastColor);
+    const currentColors = this.props.colors.slice(indexOfFirstColor, indexOfLastColor);
 
     const cards = currentColors.map((colorItem, index) => { 
       return(<ColorCard color={colorItem} key={colorItem} />)
@@ -39,7 +40,7 @@ class AllColorsList extends React.Component {
     
 
     const pageNumbers = [];
-    for (let i = 1; i <= Math.ceil(this.colors.length / colorsPerPage); i++) {
+    for (let i = 1; i <= Math.ceil(this.props.colors.length / colorsPerPage); i++) {
       pageNumbers.push(i);
     }
 
@@ -65,7 +66,6 @@ class AllColorsList extends React.Component {
           { renderPageNumbers }
         </div>   
       </React.Fragment>
-
     )
   }
 }

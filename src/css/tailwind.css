@@ -2939,6 +2939,18 @@ button,
   min-width: 0;
 }
 
+.min-w-min-w-xs {
+  min-width: 5rem;
+}
+
+.min-w-min-w-sm {
+  min-width: 10rem;
+}
+
+.min-w-min-w-md {
+  min-width: 15rem;
+}
+
 .min-w-full {
   min-width: 100%;
 }
@@ -6851,6 +6863,18 @@ button,
     min-width: 0;
   }
 
+  .sm\:min-w-min-w-xs {
+    min-width: 5rem;
+  }
+
+  .sm\:min-w-min-w-sm {
+    min-width: 10rem;
+  }
+
+  .sm\:min-w-min-w-md {
+    min-width: 15rem;
+  }
+
   .sm\:min-w-full {
     min-width: 100%;
   }
@@ -10754,6 +10778,18 @@ button,
 
   .md\:min-w-0 {
     min-width: 0;
+  }
+
+  .md\:min-w-min-w-xs {
+    min-width: 5rem;
+  }
+
+  .md\:min-w-min-w-sm {
+    min-width: 10rem;
+  }
+
+  .md\:min-w-min-w-md {
+    min-width: 15rem;
   }
 
   .md\:min-w-full {
@@ -14661,6 +14697,18 @@ button,
     min-width: 0;
   }
 
+  .lg\:min-w-min-w-xs {
+    min-width: 5rem;
+  }
+
+  .lg\:min-w-min-w-sm {
+    min-width: 10rem;
+  }
+
+  .lg\:min-w-min-w-md {
+    min-width: 15rem;
+  }
+
   .lg\:min-w-full {
     min-width: 100%;
   }
@@ -18564,6 +18612,18 @@ button,
 
   .xl\:min-w-0 {
     min-width: 0;
+  }
+
+  .xl\:min-w-min-w-xs {
+    min-width: 5rem;
+  }
+
+  .xl\:min-w-min-w-sm {
+    min-width: 10rem;
+  }
+
+  .xl\:min-w-min-w-md {
+    min-width: 15rem;
   }
 
   .xl\:min-w-full {
