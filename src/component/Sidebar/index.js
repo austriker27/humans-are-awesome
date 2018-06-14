@@ -1,19 +1,27 @@
 import React, { Component } from 'react';
 import './Sidebar.css';
+import { Link } from 'react-router-dom'
 
-// import randomColor from 'randomcolor';
-
-// setting up a random color generator based onClick
-// loop through the colorsArray and select an item at a random indice, numbered 0 - 99
 
 class Sidebar extends Component {
+  constructor(props) {
+    super(props);
+  }
+  
   render() {
+
+    const colors = this.props.colors;
+    const randomColor = colors[(Math.floor(Math.random()*colors.length))];
+
+
     return (
-      <div className="bg-grey h-auto">
-        <div className="p-4 mt-8 w-64">
-          <button className="w-full bg-white hover:bg-grey-darkest text-grey-darkest hover:text-white py-4 px-4 border border-grey-darkest hover:border-transparent rounded">
-          Random Color
-          </button>
+      <div className="min-h-screen h-auto max-w-sm mt-8 ">
+        <div className="p-4 w-64">
+          <Link 
+            to={randomColor.substring(1)} 
+            className="w-full bg-white hover:bg-grey-darkest text-grey-darkest hover:text-white py-4 px-4 border border-grey-darkest hover:border-transparent rounded">
+            Random Color
+          </Link>
         </div>
 
         <ul className="list-reset flex flex-col"> 

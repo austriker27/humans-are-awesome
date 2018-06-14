@@ -9,32 +9,56 @@ import {
 import Header from '../Header';
 import Sidebar from '../Sidebar'
 import AllColorsList from '../AllColorsList';
-// import Pagination from '../Pagination/';
 import SingleColorDetail from '../SingleColorDetail';
+import colorsArray from '../../utils/colorGenerator';
+
 
 require('typeface-source-serif-pro');
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.colors = colorsArray(100);
+  }
+
   render() {
     return (
       <div className="overflow-hidden">
-        <Header/>
-        <div className="flex">
-          <Sidebar/>
-          <Router>
-            <div className="flex flex-wrap justify-start w-5/6 mt-8">
-              {<Route exact path="/" component={AllColorsList} />}
-              {<Route exact path="/:hex" component={SingleColorDetail} />}
-              
+      <Header/>
+      <div className="">
+        <Router>
+          <div className="flex h-full">
+            <div className="w-1/6 bg-grey h-full">
+              <Sidebar colors={this.colors}/>
             </div>
-          </Router>
-        </div>
+            <div className="flex flex-col justify-start w-5/6 mx-2 mt-4">
+              {<Route exact path="/" component={AllColorsList} />}
+              {<Route exact path="/:hex" component={SingleColorDetail} colors={this.colors}/>}
+            </div>
+          </div>
+        </Router>
       </div>
+    </div>
+
     );
   }
 }
 
-// add in the browser router
-// <Route path="/:hex" component={SingleColorDetail} />
+      // <div className="overflow-hidden">
+      //   <Header/>
+      //   <div className="flex">
+      //     <div className="w-1/6 bg-grey h-full">
+      //       <Sidebar colors={this.colors}/>
+      //     </div>
+      //     <Router>
+            
+      //       <div className="flex flex-col justify-start w-5/6 mx-2 mt-8">
+      //         {<Route exact path="/" component={AllColorsList} />}
+      //         {<Route exact path="/:hex" component={SingleColorDetail} colors={this.colors}/>}              
+      //       </div>
+      //     </Router>
+      //   </div>
+      // </div>
 
 export default App;

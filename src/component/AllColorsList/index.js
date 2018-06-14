@@ -39,7 +39,7 @@ class AllColorsList extends React.Component {
     
 
     const pageNumbers = [];
-    for (let i = 1; i <= Math.ceil(this.colors  .length / colorsPerPage); i++) {
+    for (let i = 1; i <= Math.ceil(this.colors.length / colorsPerPage); i++) {
       pageNumbers.push(i);
     }
 
@@ -57,11 +57,13 @@ class AllColorsList extends React.Component {
     });
 
     return (
-      <React.Fragment> 
-        { cards }
-        <ul className="flex justify-around w-1/2 mx-auto my-4 p-0" id="pageNumbers">
+      <React.Fragment>
+        <div className="flex flex-wrap"> 
+          { cards }
+        </div>
+        <div className="flex justify-around w-1/4 mx-auto my-4 p-0" id="pageNumbers">
           { renderPageNumbers }
-        </ul>   
+        </div>   
       </React.Fragment>
 
     )
