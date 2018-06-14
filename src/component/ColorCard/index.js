@@ -8,7 +8,7 @@ class ColorCard extends React.Component {
 	
         <div className="m-4 max-w-sm rounded overflow-hidden shadow w-48">
           <Link 
-            className="text-grey-darker text-left"
+            className="text-brand-black text-left"
             to={this.props.color.substring(1)} 
             style={{ textDecoration:'none' }}
           >         
@@ -18,7 +18,7 @@ class ColorCard extends React.Component {
             >
             </div>
             <div className="px-6 py-4">
-              <p className="text-grey-darker text-left">
+              <p className="text-brand-black text-left">
                 {this.props.color} 
               </p>
             </div>

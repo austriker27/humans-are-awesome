@@ -45,7 +45,7 @@ class AllColorsList extends React.Component {
           key={number}
           id={number}
           onClick={this.handleClick}
-          className="text-grey-darker hover:black cursor-pointer"
+          className="text-brand-black hover:black cursor-pointer"
         >
           {number}
         </div>

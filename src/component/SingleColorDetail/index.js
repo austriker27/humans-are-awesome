@@ -22,7 +22,7 @@ class SingleColorDetail extends React.Component {
     <React.Fragment>
       <div className="m-4 rounded overflow-hidden shadow w-5/6 mx-auto">
         <div 
-          className="text-grey-darker text-left"
+          className="text-brand-black text-left"
           style={{ textDecoration:'none' }}
         >         
           <div 
@@ -31,7 +31,7 @@ class SingleColorDetail extends React.Component {
           >
           </div>
           <div className="px-6 py-8">
-            <p className="text-grey-darker text-left text-2xl">
+            <p className="text-brand-black text-left text-2xl">
             #{this.SelectedColor}
             </p>
           </div>
@@ -47,7 +47,7 @@ class SingleColorDetail extends React.Component {
       </div>
 
       <Link 
-        className="bg-white hover:bg-grey-darkest text-grey-darkest hover:text-white py-4 px-4 border border-grey-darkest hover:border-transparent rounded mx-auto h-12 w-48 m-4 no-underline text-center"
+        className="bg-white hover:bg-grey-darkest text-brand-black hover:text-white py-4 px-4 border border-grey-darkest hover:border-transparent rounded mx-auto h-12 w-48 m-4 no-underline text-center"
         to="/"
       > 
         Clear
