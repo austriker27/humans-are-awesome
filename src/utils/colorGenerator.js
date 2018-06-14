@@ -71,11 +71,12 @@ import randomColor from 'randomcolor';
 //   })]
 // };
 
-const colorsArray = 
-[...randomColor({
-  count: 100,
-  luminosity: 'random',
-})]
+const colorsArray = (number) => {
+  return([...randomColor({
+    count: number,
+    luminosity: 'random',
+  })])
+}
   
 export default colorsArray;
 

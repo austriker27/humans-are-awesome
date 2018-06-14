@@ -1,40 +1,34 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Route } from 'react-router-dom'
+import {
+  HashRouter as Router,
+  Route,
+} from 'react-router-dom'
 
 
 import Header from '../Header';
 import Sidebar from '../Sidebar'
 import AllColorsList from '../AllColorsList';
-import Pagination from '../Pagination/';
+// import Pagination from '../Pagination/';
 import SingleColorDetail from '../SingleColorDetail';
 
 require('typeface-source-serif-pro');
 
 class App extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      name: '',
-      colorsArray: [],
-      selected: false,
-      currentPage: 1,
-      colorsPerPage: 12
-    };
-  }
-
   render() {
     return (
-      <div>
+      <div className="overflow-hidden">
         <Header/>
         <div className="flex">
           <Sidebar/>
-          <BrowserRouter>
-            <Route path="/" component={AllColorsList} />
-            
-          </BrowserRouter>
+          <Router>
+            <div className="flex flex-wrap justify-start w-5/6 mt-8">
+              {<Route exact path="/" component={AllColorsList} />}
+              {<Route exact path="/:hex" component={SingleColorDetail} />}
+              
+            </div>
+          </Router>
         </div>
-        <Pagination onClick={this.state.colorsArray}/>
       </div>
     );
   }

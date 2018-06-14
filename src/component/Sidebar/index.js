@@ -9,7 +9,7 @@ import './Sidebar.css';
 class Sidebar extends Component {
   render() {
     return (
-      <div className="bg-grey">
+      <div className="bg-grey h-auto">
         <div className="p-4 mt-8 w-64">
           <button className="w-full bg-white hover:bg-grey-darkest text-grey-darkest hover:text-white py-4 px-4 border border-grey-darkest hover:border-transparent rounded">
           Random Color
