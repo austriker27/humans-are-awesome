@@ -20,7 +20,7 @@ class SingleColorDetail extends React.Component {
 
   return(
     <React.Fragment>
-      <div className="m-4 rounded overflow-hidden shadow-lg w-5/6 mx-auto">
+      <div className="m-4 rounded overflow-hidden shadow w-5/6 mx-auto">
         <div 
           className="text-grey-darker text-left"
           style={{ textDecoration:'none' }}

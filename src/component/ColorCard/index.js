@@ -6,7 +6,7 @@ class ColorCard extends React.Component {
 	render() {
 		return(
 	
-        <div className="m-4 max-w-sm rounded overflow-hidden shadow-lg w-48">
+        <div className="m-4 max-w-sm rounded overflow-hidden shadow w-48">
           <Link 
             className="text-grey-darker text-left"
             to={this.props.color.substring(1)} 

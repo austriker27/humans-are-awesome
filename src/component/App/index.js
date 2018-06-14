@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import { HashRouter as Router, Route } from 'react-router-dom'
 
 import Header from '../Header';
@@ -15,7 +14,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.colors = colorsArray(100);
+    let totalNumberOfColors = '100';
+    this.colors = colorsArray(totalNumberOfColors);
   }
 
   render() {
