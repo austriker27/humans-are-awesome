@@ -1,69 +1,78 @@
-# Helpful Human Applicant Interview Challenge
+# The HH Color Picker
 
-Welcome to Helpful Human's at home proficiency challenge! This challenge gauges your knowledge on a few different metrics that we use, in part, to evaluate your skills. In this repo, you will find the assets that are required to replicate the design that is also included in this repo. Both .sketch and .png assets are available.
+This is a fun little color picker that generates random color and allows a user to pick a color swatch from a bunch of randomly generated colors. Right now the total numbers generated is 100 but this is relatively easy to change by updating the `totalNumberOfColors` variable in `src/component/App/index.js`. Upon clicking on a color swatch the website generates two color swatches with lighter luminosity and two color swatches with darker luminosity. A user can hit the clear button to go back. 
 
-To get started, clone this repo. Add your work to it in whatever structure you prefer, then push it to your own, renamed repo. When you are finished, follow the instructions at the end of this document.
+## Getting Started
 
-This challenge has different milestones.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-## Core
-Stated briefly, the core goal is to create a simple but functional app that has a data, view and logic layer. The app will display color swatches, and that's about it!
+### Prerequisites
 
-The core goals should be completed in full. 
+What things you need to install the software and how to install them
 
-## Stretch
-The stretch goals can also be met if you choose to do so. Not completing the stretch goals does not disqualify you in any way nor will it lead to a disadvantage in comparison to other applicants.
+```
+a computer, the internet, and much brawndo to stay hydrated
+```
 
-## Bonus Stretch
-Bonus stretch goals inherit properties of stretch goals but completing these goals will say to us, "I believe the code I've written for the core goals and the stretch goals is production ready".
+### Installing
 
-## Additional Information
-An applicant completing a well thought out solution to the core challenges is just as meaningful to us as a solution that completes all goals but is not implemented very well.
+A step by step series of examples that tell you how to get a development env running
 
-If you'd like to implement additional functionality, or change the functionality of this challenge, feel free but be prepared to discuss your reasoning for doing so. We like critical thinking. We don't like improper implementation without reason.
+To install and run on your machine, git clone or download the repo and then run the following commands. 
 
-## Time
-Keep track of how much time you spent on the challenge but also feel free to spend as much time as you want. Your time is very valuable and we are thankful you're taking the time demonstrate your skills for us.
+```
+npm install
+npm run start
+```
 
-
-## Core Goals
-- Replicate design
-  - [Font](./FONT.md)
-  - Styles
-  - Iconography
-- Replicate functionality
-  - Create a database of colors (minimum 100)
-  - Paginate your data to show a certain number of swatches at a time
-  - Display both the color swatch and the label of the color
-  - Ability to select random color and modify view accordingly
-  - Clicking swatch changes to color detail view
-
-## Stretch Goals
-- Design
-  - Make it responsive
-- Functionality
-  - Generate color list from a script
-
-## Bonus Stretch Goals
-- Design
-  - Include interaction design
-  - Add tints/shades in detail view
-
-- Functionality
-  - Add search functionality
-  - Color generation script guarantees same colors and order
-  - Group by color (Make sidebar menu functional)
-
-- Data
-  - Fetch data with GraphQL
+Point your browser to [localhost](http://localhost:3000/) to preview. It will live reload as you make any updates to the React or CSS files. 
 
 
-## Deliverables
-In your email submission response to the test invitation from AngelList, please include the following:
-- Link to your repo
-- URL to your hosted App (Use a free hosting service of your choice)
-- [Include a Donger](http://dongerlist.com/) that best represents your state of mind when complete
+Here's a gif preview of what the website actions looks like:
+![A screencaptured gif of how to use this website](https://dzwonsemrish7.cloudfront.net/items/0S2V363r0C1j1N2g1j0F/Screen%20Recording%202018-06-14%20at%2010.58%20AM.gif)
 
-Thanks and we look forward to your submission!
+## Easter Egg
 
-ლ ( ◕  ᗜ  ◕ ) ლ
+Per typical convention the HH logo in the navigation bar brings a user back to the home page. 
+
+
+## Deployment
+
+Deployed via the amazing Netlify to [here](https://hh-color-picker.netlify.com/#/).
+
+## Built With
+
+* [ReactJS](https://reactjs.org/) - The JS framework used
+* [TailwindCSS](https://tailwindcss.com/) - Utility first CSS framework
+* [Webpack](https://webpack.js.org/) - Used to generate RSS Feeds
+* [randomColorJS](https://github.com/davidmerfield/randomColor) - Used to generate RSS Feeds
+
+## Contributing
+
+Feel free to create a fork and then send a PR if you would like to contribute.
+
+## Authors
+
+* **David Lindahl** - *A Man Coding Army* - [My Github](https://github.com/austriker27)
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Much thanks to friends and family who put up with me
+
+## TODO
+
+* Create some tests
+* Design layout for mobile first
+* Add ability for user to change the total number of randomly generated colors
+* perfect the color swatch details page so it more accurately grabs color variants of the selected color
+* underline the current page in the pagination feature
+* search functionality
+* functionality for the colors on the sidebar
+* perhaps find a color API to use for the color swatches and details page
+
+MIT © [David A. Lindahl](www.davidalindahl.com)

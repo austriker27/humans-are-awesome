@@ -530,6 +530,9 @@ module.exports = {
     '32': '8rem',
     '48': '12rem',
     '64': '16rem',
+    '80': '20rem',
+    '96': '24rem',
+    '112': '28rem',
     'full': '100%',
     'screen': '100vh'
   },
@@ -551,6 +554,9 @@ module.exports = {
 
   minWidth: {
     '0': '0',
+    'min-w-xs': '5rem',
+    'min-w-sm': '10rem',
+    'min-w-md': '15rem',
     'full': '100%',
   },
 

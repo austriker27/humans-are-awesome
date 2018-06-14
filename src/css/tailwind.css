@@ -2561,6 +2561,18 @@ button,
   height: 16rem;
 }
 
+.h-80 {
+  height: 20rem;
+}
+
+.h-96 {
+  height: 24rem;
+}
+
+.h-112 {
+  height: 28rem;
+}
+
 .h-auto {
   height: auto;
 }
@@ -2925,6 +2937,18 @@ button,
 
 .min-w-0 {
   min-width: 0;
+}
+
+.min-w-min-w-xs {
+  min-width: 5rem;
+}
+
+.min-w-min-w-sm {
+  min-width: 10rem;
+}
+
+.min-w-min-w-md {
+  min-width: 15rem;
 }
 
 .min-w-full {
@@ -6461,6 +6485,18 @@ button,
     height: 16rem;
   }
 
+  .sm\:h-80 {
+    height: 20rem;
+  }
+
+  .sm\:h-96 {
+    height: 24rem;
+  }
+
+  .sm\:h-112 {
+    height: 28rem;
+  }
+
   .sm\:h-auto {
     height: auto;
   }
@@ -6825,6 +6861,18 @@ button,
 
   .sm\:min-w-0 {
     min-width: 0;
+  }
+
+  .sm\:min-w-min-w-xs {
+    min-width: 5rem;
+  }
+
+  .sm\:min-w-min-w-sm {
+    min-width: 10rem;
+  }
+
+  .sm\:min-w-min-w-md {
+    min-width: 15rem;
   }
 
   .sm\:min-w-full {
@@ -10354,6 +10402,18 @@ button,
     height: 16rem;
   }
 
+  .md\:h-80 {
+    height: 20rem;
+  }
+
+  .md\:h-96 {
+    height: 24rem;
+  }
+
+  .md\:h-112 {
+    height: 28rem;
+  }
+
   .md\:h-auto {
     height: auto;
   }
@@ -10718,6 +10778,18 @@ button,
 
   .md\:min-w-0 {
     min-width: 0;
+  }
+
+  .md\:min-w-min-w-xs {
+    min-width: 5rem;
+  }
+
+  .md\:min-w-min-w-sm {
+    min-width: 10rem;
+  }
+
+  .md\:min-w-min-w-md {
+    min-width: 15rem;
   }
 
   .md\:min-w-full {
@@ -14247,6 +14319,18 @@ button,
     height: 16rem;
   }
 
+  .lg\:h-80 {
+    height: 20rem;
+  }
+
+  .lg\:h-96 {
+    height: 24rem;
+  }
+
+  .lg\:h-112 {
+    height: 28rem;
+  }
+
   .lg\:h-auto {
     height: auto;
   }
@@ -14611,6 +14695,18 @@ button,
 
   .lg\:min-w-0 {
     min-width: 0;
+  }
+
+  .lg\:min-w-min-w-xs {
+    min-width: 5rem;
+  }
+
+  .lg\:min-w-min-w-sm {
+    min-width: 10rem;
+  }
+
+  .lg\:min-w-min-w-md {
+    min-width: 15rem;
   }
 
   .lg\:min-w-full {
@@ -18140,6 +18236,18 @@ button,
     height: 16rem;
   }
 
+  .xl\:h-80 {
+    height: 20rem;
+  }
+
+  .xl\:h-96 {
+    height: 24rem;
+  }
+
+  .xl\:h-112 {
+    height: 28rem;
+  }
+
   .xl\:h-auto {
     height: auto;
   }
@@ -18504,6 +18612,18 @@ button,
 
   .xl\:min-w-0 {
     min-width: 0;
+  }
+
+  .xl\:min-w-min-w-xs {
+    min-width: 5rem;
+  }
+
+  .xl\:min-w-min-w-sm {
+    min-width: 10rem;
+  }
+
+  .xl\:min-w-min-w-md {
+    min-width: 15rem;
   }
 
   .xl\:min-w-full {
