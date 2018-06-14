@@ -11,7 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-a computer, the internet, and brawndo to stay hydrated
+a computer, the internet, and much brawndo to stay hydrated
 ```
 
 ### Installing
@@ -33,12 +33,12 @@ Here's a gif preview of what the website actions looks like:
 
 ## Easter Egg
 
-Per typical convetion the HH logo in the navigation bar brings a user back to the home page. 
+Per typical convention the HH logo in the navigation bar brings a user back to the home page. 
 
 
 ## Deployment
 
-Deployed via the amazing netlify to [here](https://hh-color-picker.netlify.com/#/).
+Deployed via the amazing Netlify to [here](https://hh-color-picker.netlify.com/#/).
 
 ## Built With
 
@@ -53,7 +53,7 @@ Feel free to create a fork and then send a PR if you would like to contribute.
 
 ## Authors
 
-* **David Lindahl** - *Initial work* - [My Github](https://github.com/austriker27)
+* **David Lindahl** - *A Man Coding Army* - [My Github](https://github.com/austriker27)
 
 
 ## License
